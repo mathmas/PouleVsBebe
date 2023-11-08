@@ -720,6 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rtBack: {fileID: 1112296166}
   rtJoystick: {fileID: 1524295666}
+  backJoystick: {fileID: 1112296165}
   vecJoystick: {x: 0, y: 0, z: 0}
 --- !u!1 &1011879790
 GameObject:
@@ -832,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1112296166
 RectTransform:
   m_ObjectHideFlags: 0

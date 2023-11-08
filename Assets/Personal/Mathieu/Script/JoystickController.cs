@@ -13,6 +13,8 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     [SerializeField] private RectTransform rtBack;
     [SerializeField] private RectTransform rtJoystick;
 
+    [SerializeField] private GameObject backJoystick;
+
     private float radius;
 
     public Vector3 vecJoystick;
@@ -46,6 +48,7 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     public void OnPointerDown(PointerEventData eventData)
     {
         // OnTouch(eventData.position);
+        backJoystick.SetActive(true);
         rtBack.position = eventData.position;
     }
 
@@ -53,5 +56,6 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         rtJoystick.localPosition = Vector3.zero;
         vecJoystick = Vector3.zero;
+        backJoystick.SetActive(false);
     }
 }
