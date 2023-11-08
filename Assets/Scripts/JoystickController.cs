@@ -17,7 +17,7 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     private float radius;
 
-    public Vector3 vecJoystick;
+    [HideInInspector] public Vector3 vecJoystick;
 
     #endregion
 
