@@ -45,7 +45,8 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        OnTouch(eventData.position);
+        // OnTouch(eventData.position);
+        rtBack.position = eventData.position;
     }
 
     public void OnPointerUp(PointerEventData eventData)
