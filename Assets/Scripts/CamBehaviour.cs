@@ -14,11 +14,6 @@ public class CamBehaviour : MonoBehaviour
 
     #endregion
 
-    private void Start()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         Vector3 desiredPosition = target.position + offSet;
