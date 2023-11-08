@@ -33,7 +33,7 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
         rtJoystick.localPosition = vec;
 
         //Normalize vec
-        vec = new Vector2(vec.x / rtBack.rect.width, vec.y / rtBack.rect.height) * 2;
+        vec = new Vector2(vec.x / radius, vec.y / radius);
 
         vecJoystick = new Vector3(vec.x,0f, vec.y);
     }
