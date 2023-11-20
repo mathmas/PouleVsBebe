@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6758987576108281581}
   - component: {fileID: 5780255180134897817}
   - component: {fileID: 3099261854027581623}
+  - component: {fileID: 6044663521263851049}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickController: {fileID: 0}
   speed: 3
+--- !u!114 &6044663521263851049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954034232095194753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d3b79d8552ffa48883ff2405896ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babysList: []
 --- !u!1 &4601317079498061683
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +125,7 @@ GameObject:
   - component: {fileID: 1334736133451993789}
   - component: {fileID: 6641584293949955919}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
