@@ -135,6 +135,7 @@ MonoBehaviour:
   isAngry: 0
   isStunded: 0
   timeStund: 1.5
+  refreshPlayerPosRate: 1.26
   path: {fileID: 0}
   player: {fileID: 0}
 --- !u!136 &1254569840834593174
@@ -170,7 +171,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

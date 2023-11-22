@@ -11,15 +11,21 @@ public class MercyBehaviour : MonoBehaviour
     [HideInInspector] public bool isAngry;
     [HideInInspector] public bool isStunded;
 
+    [Range(0f, 2f)]
     [SerializeField] private float timeStund;
+    [Range(0f, 2f)]
+    [SerializeField] private float refreshPlayerPosRate;
+    private float refreshTimeLeft;
+
     private float speed;
     private float timeLeftStund;
     public MercyPathScriptableObject path;
     private int index;
-    public Transform player;
+    [HideInInspector] public Transform player;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         speed = agent.speed;
         timeLeftStund = timeStund;
@@ -29,9 +35,17 @@ public class MercyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isAngry)
+        if (isAngry)
         {
-            agent.SetDestination(player.position);
+            if(refreshTimeLeft < 0)
+            {
+                agent.SetDestination(player.position + player.position / 10);
+                refreshTimeLeft = refreshPlayerPosRate;
+            }else
+            {
+                refreshTimeLeft -= Time.deltaTime;
+            }
+
         }
         else
         {
