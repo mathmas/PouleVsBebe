@@ -6,16 +6,29 @@ using UnityEngine.EventSystems;
 public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     /*
-     * This script has to be in a canvas
+     * How this script works ?
+     * 
+     *  This script only works if a eventSystem is in the scene
+     *  This script has to be in a canvas
+     * 
+     *  In a canva
+     * 
+     *      - First it needs a joystick (image) and a background for the joystick (image)
+     *      - And an image transparent on the top of it
+     *  
+     * When you touch the screen, the joystick (global) appear under your touch
+     * 
      */
     #region var
 
     [SerializeField] private RectTransform rtBack;
     [SerializeField] private RectTransform rtJoystick;
 
+    [SerializeField] private GameObject backJoystick;
+
     private float radius;
 
-    public Vector3 vecJoystick;
+    [HideInInspector] public Vector3 vecJoystick;
 
     #endregion
 
@@ -46,6 +59,7 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     public void OnPointerDown(PointerEventData eventData)
     {
         // OnTouch(eventData.position);
+        backJoystick.SetActive(true);
         rtBack.position = eventData.position;
     }
 
@@ -53,5 +67,6 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         rtJoystick.localPosition = Vector3.zero;
         vecJoystick = Vector3.zero;
+        backJoystick.SetActive(false);
     }
 }
