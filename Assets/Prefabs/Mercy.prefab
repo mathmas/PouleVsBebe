@@ -131,12 +131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba101245e46d424796900d75af01cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angryWithoutBaby: 1
+  walkSpeed: 3.01
+  runSpeed: 5.99
+  timeStund: 1.5
+  refreshPlayerPosRate: 0.6
+  path: {fileID: 0}
   agent: {fileID: 0}
   isAngry: 0
   isStunded: 0
-  timeStund: 1.5
-  refreshPlayerPosRate: 1.26
-  path: {fileID: 0}
   player: {fileID: 0}
 --- !u!136 &1254569840834593174
 CapsuleCollider:
@@ -230,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4e57208b529314eb4132b83ad25ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mercyBehaviour: {fileID: 0}
 --- !u!33 &3051078090826968261
 MeshFilter:
   m_ObjectHideFlags: 0
