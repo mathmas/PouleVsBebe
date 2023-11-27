@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5551462827012588741}
-  - component: {fileID: 6758987576108281581}
-  - component: {fileID: 5780255180134897817}
   - component: {fileID: 3099261854027581623}
   - component: {fileID: 6044663521263851049}
+  - component: {fileID: 6758987576108281581}
+  - component: {fileID: 5780255180134897817}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -36,6 +36,34 @@ Transform:
   - {fileID: 8864498764282611535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3099261854027581623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954034232095194753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102775a49453bf24da2a1a4e805fe925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  runSpeed: 3
+  joystickController: {fileID: 0}
+--- !u!114 &6044663521263851049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954034232095194753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d3b79d8552ffa48883ff2405896ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babysList: []
 --- !u!136 &6758987576108281581
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -86,33 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &3099261854027581623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954034232095194753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102775a49453bf24da2a1a4e805fe925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystickController: {fileID: 0}
-  speed: 3
---- !u!114 &6044663521263851049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954034232095194753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d3b79d8552ffa48883ff2405896ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  babysList: []
 --- !u!1 &4601317079498061683
 GameObject:
   m_ObjectHideFlags: 0
