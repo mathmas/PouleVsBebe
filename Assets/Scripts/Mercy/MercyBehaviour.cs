@@ -6,6 +6,12 @@ using UnityEngine.AI;
 
 public class MercyBehaviour : MonoBehaviour
 {
+    [Header("Mercy attributes")]
+    [Space(5f)]
+
+    [Tooltip("When activate the mercy is angry when she see the chicken")]
+    [SerializeField] public bool angryWithoutBaby;
+
     [HideInInspector] public NavMeshAgent agent;
 
     [HideInInspector] public bool isAngry;

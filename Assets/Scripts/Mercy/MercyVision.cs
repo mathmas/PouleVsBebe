@@ -4,19 +4,7 @@ using UnityEngine;
 
 public class MercyVision : MonoBehaviour
 {
-    [Space]
-
-    [Header("Mercy attributes")]
-    [Space(5f)]
-
-    [Tooltip("When activate the mercy is angry when she see the chicken")]
-    [SerializeField] private bool angryWithoutBaby;
-
-    [Space]
-
     [HideInInspector] private MercyBehaviour mercyBehaviour;
-
-
 
     void Start()
     {
@@ -27,7 +15,7 @@ public class MercyVision : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if(angryWithoutBaby)
+            if(mercyBehaviour.angryWithoutBaby)
             {
                 BecomeAngry();
             }
