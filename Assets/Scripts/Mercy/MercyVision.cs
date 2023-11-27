@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class MercyVision : MonoBehaviour
 {
-    public MercyBehaviour mercyBehaviour;
-    // Start is called before the first frame update
+    [Space]
+
+    [Header("Mercy attributes")]
+    [Space(5f)]
+
+    [Tooltip("When activate the mercy is angry when she see the chicken")]
+    [SerializeField] private bool angryWithoutBaby;
+
+    [Space]
+
+    [HideInInspector] private MercyBehaviour mercyBehaviour;
+
+
+
     void Start()
     {
         mercyBehaviour = transform.parent.GetComponent<MercyBehaviour>();
@@ -15,17 +27,29 @@ public class MercyVision : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            for (int i = 0; i < col.transform.childCount; i++)
+            if(angryWithoutBaby)
             {
-                if (col.transform.GetChild(i).CompareTag("Baby"))
+                BecomeAngry();
+            }
+            else
+            {
+                for (int i = 0; i < col.transform.childCount; i++)
                 {
-                    if(!mercyBehaviour.isAngry)
+                    if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
-                        mercyBehaviour.isAngry = true;
-                        mercyBehaviour.isStunded = true;
+                        BecomeAngry();
                     }
                 }
             }
+        }
+    }
+
+    private void BecomeAngry()
+    {
+        if (!mercyBehaviour.isAngry)
+        {
+            mercyBehaviour.isAngry = true;
+            mercyBehaviour.isStunded = true;
         }
     }
 }
