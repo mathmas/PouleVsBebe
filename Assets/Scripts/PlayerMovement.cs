@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Don't touch this !")]
     [Space(5f)]
+    [Tooltip("Add the Canvas joystickController script")]
     [SerializeField] private JoystickController joystickController;
 
     private Rigidbody rb;
