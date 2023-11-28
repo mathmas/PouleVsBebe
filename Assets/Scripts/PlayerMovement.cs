@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Space]
     #region variables
 
-    public JoystickController joystickController;
+    [Header("Player Statistics")]
+    [Space(5f)]
 
-    [SerializeField] private float speed;
+    [Range(1f, 10f)]
+    [Tooltip("Chicken speed when not found")]
+    [SerializeField] private float walkSpeed;
+    [Range(3f, 15f)]
+    [Tooltip("Chicken speed when found")]
+    [SerializeField] private float runSpeed;
+
+
+    [Space]
+
+    [Header("Don't touch this !")]
+    [Space(5f)]
+    [Tooltip("Add the Canvas joystickController script")]
+    [SerializeField] private JoystickController joystickController;
 
     private Rigidbody rb;
-
     #endregion
 
     private void Start()
@@ -21,6 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = (speed * joystickController.vecJoystick); 
+        rb.velocity = (walkSpeed * joystickController.vecJoystick); 
     }
 }
