@@ -6,10 +6,13 @@ public class CamBehaviour : MonoBehaviour
 {
     #region variables
 
+    [Tooltip("GameObject Camera will follow")]
     [SerializeField] private Transform target;
 
     [Range(0f, 1f)]
     [SerializeField] private float smoothSpeed;
+
+    [Tooltip("Distance between the camera and the target")]
     [SerializeField] private Vector3 offSet;
 
     #endregion

@@ -21,9 +21,12 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
      */
     #region var
 
+    [Tooltip("Put the rect transform component of the background of the joystick")]
     [SerializeField] private RectTransform rtBack;
+    [Tooltip("Put the rect transform component of the joystick")]
     [SerializeField] private RectTransform rtJoystick;
 
+    [Tooltip("Put the background GameObject")]
     [SerializeField] private GameObject backJoystick;
 
     private float radius;
