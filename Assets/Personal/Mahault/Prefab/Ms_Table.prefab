@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ms_Table
       objectReference: {fileID: 0}
+    - target: {fileID: 2831065782900121813, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: afd46ee42bbcd3141aa38c03573949e5, type: 2}
+    - target: {fileID: 8217667077444694605, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: afd46ee42bbcd3141aa38c03573949e5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

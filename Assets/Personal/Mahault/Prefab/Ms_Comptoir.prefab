@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8795054143792699885, guid: f7f19be7980252b458aa98bfaea2e056, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cd4037161ac7e5499d99efe57d1ab94, type: 2}
     - target: {fileID: -8679921383154817045, guid: f7f19be7980252b458aa98bfaea2e056, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.457161
@@ -48,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -901881124932488715, guid: f7f19be7980252b458aa98bfaea2e056, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cd4037161ac7e5499d99efe57d1ab94, type: 2}
     - target: {fileID: 919132149155446097, guid: f7f19be7980252b458aa98bfaea2e056, type: 3}
       propertyPath: m_Name
       value: Ms_Comptoir

@@ -48,10 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8610900456207082834, guid: 0f3ec5602d9c49848a75082f444ceb50, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 173046b92ab80c74c80787c933cadbea, type: 2}
+    - target: {fileID: -8270347937997080037, guid: 0f3ec5602d9c49848a75082f444ceb50, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 173046b92ab80c74c80787c933cadbea, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f3ec5602d9c49848a75082f444ceb50, type: 3}
       propertyPath: m_Name
       value: Ms_Siege_Seul
       objectReference: {fileID: 0}
+    - target: {fileID: 2736677787546384117, guid: 0f3ec5602d9c49848a75082f444ceb50, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 173046b92ab80c74c80787c933cadbea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -48,10 +48,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8118017507654035009, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
+    - target: {fileID: -5899141574370075552, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
+    - target: {fileID: -3864681478250222902, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
+    - target: {fileID: -1858998641297981454, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
     - target: {fileID: 919132149155446097, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
       propertyPath: m_Name
       value: Ms_Siege_Banc
       objectReference: {fileID: 0}
+    - target: {fileID: 7590309128804183505, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
+    - target: {fileID: 8344432757281391841, guid: 2bfa8c40b8f0d5341a4a059011692b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93a054de5fca8dc41a7a09e94ef33b1e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
