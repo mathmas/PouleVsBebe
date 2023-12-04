@@ -48,10 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3235975082869269299, guid: 59f7534ce4196a84aa6c83c3ad55aaef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7c09b6dc272f94cac071b475937ea6, type: 2}
+    - target: {fileID: 508795245617449218, guid: 59f7534ce4196a84aa6c83c3ad55aaef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7c09b6dc272f94cac071b475937ea6, type: 2}
     - target: {fileID: 919132149155446097, guid: 59f7534ce4196a84aa6c83c3ad55aaef, type: 3}
       propertyPath: m_Name
       value: Ms_Porte
       objectReference: {fileID: 0}
+    - target: {fileID: 3542938541231282706, guid: 59f7534ce4196a84aa6c83c3ad55aaef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b7c09b6dc272f94cac071b475937ea6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
