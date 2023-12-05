@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1091713367284086268}
   m_Layer: 0
   m_Name: Mercy
-  m_TagString: Untagged
+  m_TagString: Mercy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angryWithoutBaby: 1
-  walkSpeed: 3.01
-  runSpeed: 5.99
+  walkSpeed: 2.09
+  runSpeed: 6.05
   timeStund: 1.5
   refreshPlayerPosRate: 0.6
   path: {fileID: 0}
