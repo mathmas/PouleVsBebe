@@ -52,6 +52,8 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
         vec = new Vector2(vec.x / radius, vec.y / radius);
 
         vecJoystick = new Vector3(vec.x,0f, vec.y);
+
+        transform.GetComponentInParent<MenuFunctions>().menuButton.SetActive(false);
     }
 
     public void OnDrag(PointerEventData eventData)

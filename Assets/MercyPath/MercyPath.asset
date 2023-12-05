@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: MercyPath
   m_EditorClassIdentifier: 
   points:
-  - {x: 10, y: 1.5, z: 3}
-  - {x: -8, y: 1.5, z: 6}
-  - {x: 2, y: 1.5, z: -8}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}

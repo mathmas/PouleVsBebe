@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExtractPoint : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ExtractPoint : MonoBehaviour
                 if (col.transform.GetChild(i).CompareTag("Baby"))
                 {
                     Debug.Log("The player extracted with a baby");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
             }
         }
