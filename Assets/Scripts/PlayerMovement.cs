@@ -35,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = (walkSpeed * joystickController.vecJoystick); 
+        rb.velocity = (walkSpeed * joystickController.vecJoystick);
+        transform.GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(rb.velocity, Vector3.zero));
         transform.LookAt(rb.velocity + transform.position);
     }
 }
