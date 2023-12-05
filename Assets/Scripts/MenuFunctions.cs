@@ -6,26 +6,55 @@ using UnityEngine.UI;
 public class MenuFunctions : MonoBehaviour
 {
     [SerializeField] private GameObject joystickController;
-    [SerializeField] private GameObject menuButton;
-    [SerializeField] private GameObject IngameMenu;
+    [SerializeField] public GameObject menuButton;
+    [SerializeField] private GameObject couveuseMenu;
+    [SerializeField] private GameObject shopMenu;
 
-    public void DesactiveJoystickController()
+    public void ToggleJoystickController()
     {
-        joystickController.SetActive(false);
+        if (joystickController.activeSelf)
+        {
+            joystickController.SetActive(false);
+        }
+        else
+        {
+            joystickController.SetActive(true);
+        }
     }
 
-    public void DesactiveMenuButton()
+    public void ToggleMenu()
     {
-        menuButton.SetActive(false);
+        if(menuButton.activeSelf)
+        {
+            menuButton.SetActive(false);
+        }
+        else
+        {
+            menuButton.SetActive(true);
+        }
     }
 
-    public void DesactiveIngameMenu()
+    public void ToggleCouveuse()
     {
-
+        if (couveuseMenu.activeSelf)
+        {
+            couveuseMenu.SetActive(false);
+        }
+        else
+        {
+            couveuseMenu.SetActive(true);
+        }
     }
 
-    public void QuitButton()
+    public void ToggleShop()
     {
-        Application.Quit();
+        if (shopMenu.activeSelf)
+        {
+            shopMenu.SetActive(false);
+        }
+        else
+        {
+            shopMenu.SetActive(true);
+        }
     }
 }
