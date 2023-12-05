@@ -75,7 +75,7 @@ public class MercyBehaviour : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(path.points[index].position,transform.position) < 1)
+            if(Vector3.Distance(path.points[index],transform.position) < 1)
             {
                 index++;
                 if(index >= path.points.Count)
@@ -91,7 +91,7 @@ public class MercyBehaviour : MonoBehaviour
 
     public void SetNewPoint()
     {
-        agent.SetDestination(path.points[index].position);
+        agent.SetDestination(path.points[index]);
     }
 
     public void StundCheck()
