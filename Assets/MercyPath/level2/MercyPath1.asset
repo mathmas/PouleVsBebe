@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62bdb4c204e68a345aed9f9ff999ae6c, type: 3}
-  m_Name: MercyPath
+  m_Name: MercyPath1
   m_EditorClassIdentifier: 
   points:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: 3.84, y: 0.5, z: -11.58}
