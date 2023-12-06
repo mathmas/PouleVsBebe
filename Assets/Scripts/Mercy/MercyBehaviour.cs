@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MercyBehaviour : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class MercyBehaviour : MonoBehaviour
     [HideInInspector] private float timeLeftStund;
     [HideInInspector] private int index;
     [HideInInspector] public NavMeshAgent agent;
-    [HideInInspector] public bool isAngry;
+    [SerializeField] public bool isAngry;
     [HideInInspector] public bool isStunded;
     [HideInInspector] public Transform player;
 
@@ -75,9 +76,10 @@ public class MercyBehaviour : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(path.points[index],transform.position) < 1)
+            if(Vector3.Distance(path.points[index],transform.position) < 1.5)
             {
                 index++;
+                Debug.Log(index);
                 if(index >= path.points.Count)
                 { 
                     index = 0;
