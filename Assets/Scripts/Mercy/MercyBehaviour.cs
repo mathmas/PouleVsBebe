@@ -21,9 +21,11 @@ public class MercyBehaviour : MonoBehaviour
     [Space(5f)]
 
     [Range(1f, 10f)]
+    [Tooltip("Mercy speed when she is calm (not angry)")]
     [SerializeField] private float walkSpeed;
 
     [Range(3f, 15f)]
+    [Tooltip("Mercy speed when she is angry")]
     [SerializeField] private float runSpeed;
 
     [Space(5f)]
@@ -34,21 +36,31 @@ public class MercyBehaviour : MonoBehaviour
 
     [Tooltip("How often does the mercy change her direction to go to the player position (in seconds)")]
     [Range(0f, 2f)]
-    [SerializeField] private float refreshPlayerPosRate;
+    [SerializeField] private float refreshRate;
 
     [Space]
 
-    [Tooltip("Scripable object for the path the mercy will follow when she haven't found the chicken")]
-    [SerializeField] public MercyPathScriptableObject path;
+    [Header("Mercy Path")]
+    [Space(5f)]
+    [Tooltip("Add the gameobject with all the points in children")]
+    [SerializeField] private Transform mercyPathObject;
+
+    [Space]
+
+    [Header("Check Mercy state")]
+    [Space(5f)]
+    [SerializeField] public bool isAngry;
+    [SerializeField] public bool isStunded;
+
 
 
     [HideInInspector] private float refreshTimeLeft;
     [HideInInspector] private float timeLeftStund;
     [HideInInspector] private int index;
     [HideInInspector] public NavMeshAgent agent;
-    [SerializeField] public bool isAngry;
-    [HideInInspector] public bool isStunded;
     [HideInInspector] public Transform player;
+
+
 
     void Start()
     {
@@ -66,8 +78,8 @@ public class MercyBehaviour : MonoBehaviour
         {
             if(refreshTimeLeft < 0)
             {
-                agent.SetDestination(player.position + player.position / 10);
-                refreshTimeLeft = refreshPlayerPosRate;
+                agent.SetDestination(player.position + (player.position / 10));
+                refreshTimeLeft = refreshRate;
             }else
             {
                 refreshTimeLeft -= Time.deltaTime;
@@ -76,11 +88,12 @@ public class MercyBehaviour : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(path.points[index],transform.position) < 1.5)
+
+            if(Vector3.Distance(mercyPathObject.GetChild(index).position ,transform.position) < 1.5)
             {
                 index++;
                 Debug.Log(index);
-                if(index >= path.points.Count)
+                if(index >= mercyPathObject.childCount)
                 { 
                     index = 0;
                 }
@@ -93,7 +106,7 @@ public class MercyBehaviour : MonoBehaviour
 
     public void SetNewPoint()
     {
-        agent.SetDestination(path.points[index]);
+        agent.SetDestination(mercyPathObject.GetChild(index).position);
     }
 
     public void StundCheck()
@@ -131,6 +144,8 @@ public class MercyBehaviour : MonoBehaviour
             }
         }
     }
+
+
 
     private void MercyTouched(Collision col)
     {

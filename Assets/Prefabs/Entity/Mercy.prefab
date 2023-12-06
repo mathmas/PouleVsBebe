@@ -84,11 +84,11 @@ MonoBehaviour:
   walkSpeed: 2.09
   runSpeed: 6.05
   timeStund: 1.5
-  refreshPlayerPosRate: 0.6
-  path: {fileID: 0}
-  agent: {fileID: 0}
+  refreshRate: 0.6
+  mercyPathObject: {fileID: 0}
   isAngry: 0
   isStunded: 0
+  agent: {fileID: 0}
   player: {fileID: 0}
 --- !u!136 &1254569840834593174
 CapsuleCollider:
@@ -122,7 +122,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5865581902750227417}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
