@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7318835895238909878
+--- !u!1001 &5932537041065712150
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.21
+      value: -4.002918
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.85
+      value: 3.3616505
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ms_Table
       objectReference: {fileID: 0}
+    - target: {fileID: 2831065782900121813, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: afd46ee42bbcd3141aa38c03573949e5, type: 2}
+    - target: {fileID: 8217667077444694605, guid: dddcdd22538cd484cb19aa44ac78b7da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: afd46ee42bbcd3141aa38c03573949e5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
