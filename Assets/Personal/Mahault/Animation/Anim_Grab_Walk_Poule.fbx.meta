@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42569e4e42c61e24abc1640649964d78
+guid: 658475360fdfaa7479a61c78d9541d9b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,36 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Grab-Walk
-      takeName: Grab_Poule
-      internalID: 7265114204941620272
-      firstFrame: 1
-      lastFrame: 19
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
