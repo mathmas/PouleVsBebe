@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angryWithoutBaby: 1
   walkSpeed: 2.09
-  runSpeed: 6.05
+  runSpeed: 4.13
   timeStund: 1.5
   refreshRate: 0.6
   mercyPathObject: {fileID: 0}
@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ms_Infirmiere_Blanc
       objectReference: {fileID: 0}
+    - target: {fileID: 2963576868860086243, guid: 91d07d3f953f24d4f8c528b92b491923, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c077a182a31d35c439dd181e3e289f12, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

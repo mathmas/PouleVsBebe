@@ -20,11 +20,11 @@ public class MercyBehaviour : MonoBehaviour
     [Header("Mercy statistics")]
     [Space(5f)]
 
-    [Range(1f, 10f)]
+    [Range(0.5f, 5f)]
     [Tooltip("Mercy speed when she is calm (not angry)")]
     [SerializeField] private float walkSpeed;
 
-    [Range(3f, 15f)]
+    [Range(1f, 8f)]
     [Tooltip("Mercy speed when she is angry")]
     [SerializeField] private float runSpeed;
 
@@ -84,7 +84,8 @@ public class MercyBehaviour : MonoBehaviour
             {
                 refreshTimeLeft -= Time.deltaTime;
             }
-
+            agent.speed = runSpeed;
+            GetComponentInChildren<Animator>().SetBool("isAngry", true);
         }
         else
         {
@@ -100,7 +101,7 @@ public class MercyBehaviour : MonoBehaviour
                 SetNewPoint();
             }
         }
-
+        GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(agent.velocity, Vector3.zero));
         StundCheck();
     }
 

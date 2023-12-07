@@ -55,6 +55,9 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
 
         transform.GetComponentInParent<MenuFunctions>().menuButton.SetActive(false);
         Camera.main.GetComponent<CamBehaviour>().isGameStarted = true;
+
+        //Set Player animator
+        Camera.main.GetComponent<CamBehaviour>().target.GetComponentInChildren<Animator>().SetTrigger("isGameStarted");
     }
 
     public void OnDrag(PointerEventData eventData)

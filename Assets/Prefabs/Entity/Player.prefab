@@ -48,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102775a49453bf24da2a1a4e805fe925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 3
+  walkSpeed: 3
+  runSpeed: 5
+  isDiscovered: 0
+  isHoldingBaby: 0
   joystickController: {fileID: 0}
 --- !u!114 &6044663521263851049
 MonoBehaviour:
@@ -198,6 +200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesh_Poule
       objectReference: {fileID: 0}
+    - target: {fileID: 6716863742354914564, guid: ba6af72c0d6fb40498842152e7eae02d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 138c1f991fc20ae4bb1b3f557a3fb006, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
