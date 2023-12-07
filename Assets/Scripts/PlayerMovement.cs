@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Chicken speed when found")]
     [SerializeField] private float runSpeed;
 
+    [SerializeField] public bool isDiscovered;
+    [SerializeField] public bool isHoldingBaby;
+
 
     [Space]
 
@@ -35,7 +38,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = (walkSpeed * joystickController.vecJoystick);
+        float movespeed;
+
+        if(isDiscovered)
+        {
+            movespeed = walkSpeed;
+        }
+        else
+        {
+            movespeed = runSpeed;
+        }
+
+        rb.velocity = (movespeed * joystickController.vecJoystick);
         transform.GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(rb.velocity, Vector3.zero));
         transform.LookAt(rb.velocity + transform.position);
     }

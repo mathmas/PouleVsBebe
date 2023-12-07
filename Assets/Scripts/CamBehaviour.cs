@@ -9,7 +9,7 @@ public class CamBehaviour : MonoBehaviour
     [SerializeField] public bool isGameStarted;
 
     [Tooltip("GameObject Camera will follow")]
-    [SerializeField] private Transform target;
+    [SerializeField] public Transform target;
 
     [Range(0f, 1f)]
     [SerializeField] private float smoothSpeed;
