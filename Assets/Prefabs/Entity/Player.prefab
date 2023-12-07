@@ -48,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102775a49453bf24da2a1a4e805fe925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 3
+  walkSpeed: 3
+  runSpeed: 5
+  isDiscovered: 0
+  isHoldingBaby: 0
   joystickController: {fileID: 0}
 --- !u!114 &6044663521263851049
 MonoBehaviour:

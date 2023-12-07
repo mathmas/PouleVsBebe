@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Statistics")]
     [Space(5f)]
 
-    [Range(1f, 10f)]
+    [Range(1f, 8f)]
     [Tooltip("Chicken speed when not found")]
     [SerializeField] private float walkSpeed;
-    [Range(3f, 15f)]
+    [Range(3f, 10f)]
     [Tooltip("Chicken speed when found")]
     [SerializeField] private float runSpeed;
 
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float movespeed;
 
-        if(isDiscovered)
+        if(!isDiscovered)
         {
             movespeed = walkSpeed;
         }
