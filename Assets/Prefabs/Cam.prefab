@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1965267198725660654}
   - component: {fileID: 7539423011437439435}
   - component: {fileID: 2526420492349990893}
-  - component: {fileID: 2780722475584266335}
+  - component: {fileID: 4252570305767862368}
   m_Layer: 0
   m_Name: Cam
   m_TagString: MainCamera
@@ -106,10 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386df8df40b2a324382ad6f393d3a552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameStarted: 0
   target: {fileID: 0}
-  smoothSpeed: 0.033
-  offSet: {x: 0, y: 12, z: -6}
---- !u!114 &2780722475584266335
+  smoothSpeed: 0.114
+  startOffSet: {x: 0, y: 5, z: -2}
+  playingOffSet: {x: 0, y: 10, z: -5}
+--- !u!114 &4252570305767862368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

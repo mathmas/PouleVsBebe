@@ -17,7 +17,7 @@ public class MercyVision : MonoBehaviour
         {
             if(mercyBehaviour.angryWithoutBaby)
             {
-                BecomeAngry();
+                BecomeAngry(col.transform);
             }
             else
             {
@@ -25,19 +25,22 @@ public class MercyVision : MonoBehaviour
                 {
                     if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
-                        BecomeAngry();
+                        BecomeAngry(col.transform);
                     }
                 }
             }
         }
     }
 
-    private void BecomeAngry()
+    private void BecomeAngry(Transform player)
     {
         if (!mercyBehaviour.isAngry)
         {
             mercyBehaviour.isAngry = true;
             mercyBehaviour.isStunded = true;
+
+            player.GetComponentInChildren<Animator>().SetBool("isDiscovered", true);
+            player.GetComponent<PlayerMovement>().isDiscovered = true;
         }
     }
 }
