@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1e3f9f1cfd96d845817d636f6b4e2b5
+guid: fdd94b2e19966f14291e8f0183f85134
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Bonjour
-      takeName: Bonjour
-      internalID: -6966830210236083461
+      name: Win
+      takeName: Win
+      internalID: 4821609917503249430
       firstFrame: 1
-      lastFrame: 80
+      lastFrame: 230
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

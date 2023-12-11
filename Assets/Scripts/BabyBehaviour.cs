@@ -28,6 +28,7 @@ public class BabyBehaviour : MonoBehaviour
 
             PlayerBabyInteraction playerBabyInteraction = col.gameObject.GetComponentInParent<PlayerBabyInteraction>();
             playerBabyInteraction.BabyTouch(this.gameObject);
+            GetComponentInChildren<Animator>().SetTrigger("Grabbed");
         }
     }
 }
