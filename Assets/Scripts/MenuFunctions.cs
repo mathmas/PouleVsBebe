@@ -9,6 +9,7 @@ public class MenuFunctions : MonoBehaviour
     [SerializeField] public GameObject menuButton;
     [SerializeField] private GameObject couveuseMenu;
     [SerializeField] private GameObject shopMenu;
+    [SerializeField] private GameObject creditsMenu;
 
     public void ToggleJoystickController()
     {
@@ -55,6 +56,18 @@ public class MenuFunctions : MonoBehaviour
         else
         {
             shopMenu.SetActive(true);
+        }
+    }
+
+    public void ToggleCredits()
+    {
+        if (creditsMenu.activeSelf)
+        {
+            creditsMenu.SetActive(false);
+        }
+        else
+        {
+            creditsMenu.SetActive(true);
         }
     }
 }
