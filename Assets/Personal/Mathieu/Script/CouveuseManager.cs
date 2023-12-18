@@ -66,13 +66,18 @@ public class CouveuseManager : MonoBehaviour
         Debug.Log("The var babyCollected has " + PlayerPrefs.GetInt("babyCollected") + " value");
 
         string babyKeyName = "baby" + PlayerPrefs.GetInt("babyCollected");
-        PlayerPrefs.SetString(babyKeyName, babyTimer);    
+        PlayerPrefs.SetString(babyKeyName, babyTimer);
+
+        SetBabyTimerList();
+
+        //Add couchs
     }
 
     private void ShowBabysTimer()
     {
         for (int i = 0; i < babyTimerList.Count; i++)
         {
+            //Set Timer
             long babyTimeLeft = (long.Parse(babyTimerList[i])) - (DateTime.Now.Ticks / 10000000);
 
             long minutesLeft = babyTimeLeft / 60;
@@ -82,41 +87,54 @@ public class CouveuseManager : MonoBehaviour
 
             timerText.text = minutesLeft.ToString("00") + ":" + secondsLeft.ToString("00");
 
-            nidParent.Find("button").GetComponent<Image>().sprite = emptySprite;
 
-            //Debug.Log("The baby " + i + " will be collectable in " + babyTimeLeft);
+            SetSprite(babySprite, i);
         }
 
         for (int i = babyTimerList.Count; i < nidParent.childCount; i++)
         {
             Text timerText = nidParent.GetChild(i).GetComponentInChildren<Text>();
-
-            nidParent.Find("button").GetComponent<Image>().sprite = babySprite;
-
             timerText.text = "";
+
+            SetSprite(emptySprite, i);
+        }
+    }
+
+    private void SetSprite(Sprite sprite, int i)
+    {
+        for (int j = 0; j < nidParent.GetChild(i).childCount; j++)
+        {
+            if (nidParent.GetChild(i).GetChild(j).CompareTag("Button"))
+            {
+                Debug.Log(nidParent.GetChild(i).GetChild(j).name);
+                nidParent.GetChild(i).GetChild(j).GetComponent<Image>().sprite = sprite;
+            }
         }
     }
 
     public void CollectBaby()
     {
-        if ((long.Parse(babyTimerList[0])) - (DateTime.Now.Ticks / 10000000) < 1)
+        if (babyTimerList[0] != null)
         {
-            int babyLeaved = PlayerPrefs.GetInt("babyLeaved") + 1;
+            if ((long.Parse(babyTimerList[0])) - (DateTime.Now.Ticks / 10000000) < 1)
+            {
+                int babyLeaved = PlayerPrefs.GetInt("babyLeaved") + 1;
 
-            PlayerPrefs.SetInt("babyLeaved", babyLeaved);
+                PlayerPrefs.SetInt("babyLeaved", babyLeaved);
 
-            string keyName = "baby" + babyLeaved;
+                string keyName = "baby" + babyLeaved;
 
-            //(PlayerPrefs.GetString(keyName))
-            babyTimerList.Remove(PlayerPrefs.GetString(keyName));
+                //(PlayerPrefs.GetString(keyName))
+                babyTimerList.Remove(PlayerPrefs.GetString(keyName));
 
-            Debug.Log(PlayerPrefs.HasKey(keyName));
+                Debug.Log(PlayerPrefs.HasKey(keyName));
 
-            PlayerPrefs.DeleteKey(keyName);
+                PlayerPrefs.DeleteKey(keyName);
 
-            Debug.Log("Baby collected");
+                Debug.Log("Baby collected");
 
-            //PlayerPrefs.SetInt("babyLeaved", babyLeaved + 1);
+                //PlayerPrefs.SetInt("babyLeaved", babyLeaved + 1);
+            }
         }
     }
 
