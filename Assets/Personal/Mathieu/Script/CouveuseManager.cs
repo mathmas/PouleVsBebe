@@ -20,8 +20,6 @@ public class CouveuseManager : MonoBehaviour
 
     private void Start()
     {
-        CheckFirstTime();
-
         AddBaby(timerBabyCollect);
         AddBaby(timerBabyCollect);
         AddBaby(timerBabyCollect);
@@ -135,21 +133,6 @@ public class CouveuseManager : MonoBehaviour
 
                 //PlayerPrefs.SetInt("babyLeaved", babyLeaved + 1);
             }
-        }
-    }
-
-    private void CheckFirstTime()
-    {
-        PlayerPrefs.DeleteAll();
-
-        if (PlayerPrefs.HasKey("babyCollected"))
-        {
-
-        }
-        else
-        {
-            PlayerPrefs.SetInt("babyCollected", 0);
-            PlayerPrefs.SetInt("babyLeaved", 0);
         }
     }
 }
