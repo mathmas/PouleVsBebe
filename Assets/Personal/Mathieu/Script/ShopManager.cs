@@ -6,6 +6,10 @@ public class ShopManager : MonoBehaviour
 {
     public Shop shop = new();
 
+    public List<ChickenScriptableObjects> chickenScriptableObjects = new();
+
+    public int activePreview;
+
     private void Start()
     {
         LoadFromJson();
@@ -28,6 +32,11 @@ public class ShopManager : MonoBehaviour
         shop = JsonUtility.FromJson<Shop>(shopData);
         Debug.Log("Load done!");
     }
+
+    public void SetActiveChicken(int i)
+    {
+        activePreview = i;
+    }
 }
 
 [System.Serializable]
@@ -35,5 +44,5 @@ public class Shop
 {
     public string activeChicken;
 
-    public List<string> chickens;
+    public List<bool> chickensAlreadyBuy;
 }
