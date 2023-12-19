@@ -15,8 +15,20 @@ public class BabyBehaviour : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            //Set all mercy Angry
+            GameObject parent = transform.parent.gameObject;
+            for(int i = 0; i < parent.transform.childCount; i++)
+            {
+                if(parent.transform.GetChild(i).CompareTag("Mercy"))
+                {
+                    Debug.Log(parent.transform.GetChild(i).name);
+                    parent.transform.GetChild(i).GetComponent<MercyBehaviour>().isAngry = true;
+                }
+            }
+
             PlayerBabyInteraction playerBabyInteraction = col.gameObject.GetComponentInParent<PlayerBabyInteraction>();
             playerBabyInteraction.BabyTouch(this.gameObject);
+            GetComponentInChildren<Animator>().SetTrigger("Grabbed");
         }
     }
 }

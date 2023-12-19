@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MercyVision : MonoBehaviour
 {
-    public MercyBehaviour mercyBehaviour;
-    // Start is called before the first frame update
+    [HideInInspector] private MercyBehaviour mercyBehaviour;
+
     void Start()
     {
         mercyBehaviour = transform.parent.GetComponent<MercyBehaviour>();
@@ -15,17 +15,32 @@ public class MercyVision : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            for (int i = 0; i < col.transform.childCount; i++)
+            if(mercyBehaviour.angryWithoutBaby)
             {
-                if (col.transform.GetChild(i).CompareTag("Baby"))
+                BecomeAngry(col.transform);
+            }
+            else
+            {
+                for (int i = 0; i < col.transform.childCount; i++)
                 {
-                    if(!mercyBehaviour.isAngry)
+                    if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
-                        mercyBehaviour.isAngry = true;
-                        mercyBehaviour.isStunded = true;
+                        BecomeAngry(col.transform);
                     }
                 }
             }
+        }
+    }
+
+    private void BecomeAngry(Transform player)
+    {
+        if (!mercyBehaviour.isAngry)
+        {
+            mercyBehaviour.isAngry = true;
+            mercyBehaviour.isStunded = true;
+
+            player.GetComponentInChildren<Animator>().SetBool("isDiscovered", true);
+            player.GetComponent<PlayerMovement>().isDiscovered = true;
         }
     }
 }

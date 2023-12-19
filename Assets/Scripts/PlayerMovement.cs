@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Space]
     #region variables
 
-    public JoystickController joystickController;
+    [Header("Player Statistics")]
+    [Space(5f)]
 
-    [SerializeField] private float speed;
+    [Range(1f, 8f)]
+    [Tooltip("Chicken speed when not found")]
+    [SerializeField] public float walkSpeed;
+    [Range(3f, 10f)]
+    [Tooltip("Chicken speed when found")]
+    [SerializeField] public float runSpeed;
+
+    [SerializeField] public bool isDiscovered;
+    [SerializeField] public bool isHoldingBaby;
+
+
+    [Space]
+
+    [Header("Don't touch this !")]
+    [Space(5f)]
+    [Tooltip("Add the Canvas joystickController script")]
+    [SerializeField] private JoystickController joystickController;
 
     private Rigidbody rb;
-
     #endregion
 
     private void Start()
@@ -21,6 +38,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = (speed * joystickController.vecJoystick); 
+        float movespeed;
+
+        if(!isDiscovered)
+        {
+            movespeed = walkSpeed;
+        }
+        else
+        {
+            movespeed = runSpeed;
+        }
+
+        rb.velocity = (movespeed * joystickController.vecJoystick);
+        transform.GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(rb.velocity, Vector3.zero));
+        transform.LookAt(rb.velocity + transform.position);
     }
 }

@@ -21,9 +21,12 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
      */
     #region var
 
+    [Tooltip("Put the rect transform component of the background of the joystick")]
     [SerializeField] private RectTransform rtBack;
+    [Tooltip("Put the rect transform component of the joystick")]
     [SerializeField] private RectTransform rtJoystick;
 
+    [Tooltip("Put the background GameObject")]
     [SerializeField] private GameObject backJoystick;
 
     private float radius;
@@ -49,6 +52,12 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
         vec = new Vector2(vec.x / radius, vec.y / radius);
 
         vecJoystick = new Vector3(vec.x,0f, vec.y);
+
+        transform.GetComponentInParent<MenuFunctions>().menuButton.SetActive(false);
+        Camera.main.GetComponent<CamBehaviour>().isGameStarted = true;
+
+        //Set Player animator
+        Camera.main.GetComponent<CamBehaviour>().target.GetComponentInChildren<Animator>().SetTrigger("isGameStarted");
     }
 
     public void OnDrag(PointerEventData eventData)
