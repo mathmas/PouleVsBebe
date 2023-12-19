@@ -42,7 +42,7 @@ public class ShopManager : MonoBehaviour
 [System.Serializable]
 public class Shop
 {
-    public string activeChicken;
+    public ChickenScriptableObjects activeChicken;
 
     public List<bool> chickensAlreadyBuy;
 }

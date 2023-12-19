@@ -11,6 +11,13 @@ public class ChickenScriptableObjects : ScriptableObject
     public Sprite spritePreview;
     public int cost;
 
+    [Header("Gameplay")]
 
     public GameObject chickenBody;
+    [Space]
+    public bool doubleCouches;
+    [Space]
+    public float speedMultiplicator;
+    [Space]
+    public bool invisible;
 }

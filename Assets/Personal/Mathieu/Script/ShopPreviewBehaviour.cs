@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class ShopPreviewBehaviour : MonoBehaviour
     public Image previewSprite;
     public Text previewCost;
     public GameObject coucheIcon;
+
 
     [SerializeField] private ChickenScriptableObjects chickenToPreview;
 
@@ -30,7 +32,7 @@ public class ShopPreviewBehaviour : MonoBehaviour
             previewCost.text = "equiped";
             coucheIcon.SetActive(false);
 
-            shopManager.shop.activeChicken = chickenToPreview.name;
+            shopManager.shop.activeChicken = chickenToPreview;
         }
         else
         {
@@ -44,6 +46,7 @@ public class ShopPreviewBehaviour : MonoBehaviour
         if (shopManager.shop.chickensAlreadyBuy[shopManager.activePreview])
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
+
             GameObject playerBody = Instantiate(shopManager.chickenScriptableObjects[shopManager.activePreview].chickenBody, player.transform.position, player.transform.rotation, player.transform.GetChild(0));
 
             Debug.Log(playerBody);
@@ -53,6 +56,30 @@ public class ShopPreviewBehaviour : MonoBehaviour
             //Give this to the player
             //shopManager.chickenScriptableObjects[shopManager.activePreview];
         }
+    }
+
+    public void ChangePlayerAbilities()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        List<GameObject> mercyList = GameObject.FindGameObjectsWithTag("Mercy").ToList();
+
+        if (chickenToPreview.invisible)
+        {
+            for (int i = 0; i < mercyList.Count; i++)
+            {
+                mercyList[i].GetComponent<MercyBehaviour>().angryWithoutBaby = false;
+            }
+        }else
+        {
+            for (int i = 0; i < mercyList.Count; i++)
+            {
+                mercyList[i].GetComponent<MercyBehaviour>().angryWithoutBaby = true;
+            }
+        }
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+        playerMovement.walkSpeed *= chickenToPreview.speedMultiplicator;
+        playerMovement.runSpeed *= chickenToPreview.speedMultiplicator;
     }
 
     public void TryToBuy()

@@ -17,3 +17,6 @@ MonoBehaviour:
   spritePreview: {fileID: 21300000, guid: a490b2fd3c9a84c46872863e77dc6bd7, type: 3}
   cost: 7
   chickenBody: {fileID: 3435427185117991839, guid: 4694c312062d8634f8e55dd19fdad2bb, type: 3}
+  doubleCouches: 0
+  speedMultiplicator: 1
+  invisible: 1
