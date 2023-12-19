@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Cours vite pour une poule
   spritePreview: {fileID: 21300000, guid: c88de5fa5b2b11145ab19543067bef79, type: 3}
   cost: 5
+  chickenBody: {fileID: 6948843973184638705, guid: 05c64e9b3e0a9424aaec18b182122cb6, type: 3}

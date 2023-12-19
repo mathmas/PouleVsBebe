@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Experte en l'art du vol
   spritePreview: {fileID: 21300000, guid: d0a264a87c8fac94c8848ba4b2a7c5ec, type: 3}
   cost: 5
+  chickenBody: {fileID: 8954559012757799595, guid: 709a1995b19114f4997961967d76eeed, type: 3}

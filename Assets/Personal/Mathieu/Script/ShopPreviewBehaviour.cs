@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class ShopPreviewBehaviour : MonoBehaviour
     public GameObject coucheIcon;
 
     [SerializeField] private ChickenScriptableObjects chickenToPreview;
+
+    [SerializeField] private RuntimeAnimatorController animatorController;
 
     private void Update()
     {
@@ -34,6 +37,20 @@ public class ShopPreviewBehaviour : MonoBehaviour
             previewCost.text = chickenToPreview.cost.ToString();
             coucheIcon.SetActive(true);
         }
+    }
+
+    public void SetPlayerChicken()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject playerBody = Instantiate(shopManager.chickenScriptableObjects[shopManager.activePreview].chickenBody, player.transform.position, player.transform.rotation, player.transform.GetChild(0));
+        
+        Debug.Log(playerBody);
+
+        Destroy(player.transform.GetChild(0).GetChild(0).gameObject);
+
+        //Give this to the player
+        //shopManager.chickenScriptableObjects[shopManager.activePreview];
+
     }
 
     public void TryToBuy()

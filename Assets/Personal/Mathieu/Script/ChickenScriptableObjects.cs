@@ -11,4 +11,6 @@ public class ChickenScriptableObjects : ScriptableObject
     public Sprite spritePreview;
     public int cost;
 
+
+    public GameObject chickenBody;
 }

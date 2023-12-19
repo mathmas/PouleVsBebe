@@ -544,6 +544,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4232040680088796104}
+        m_TargetAssemblyTypeName: ShopPreviewBehaviour, Assembly-CSharp
+        m_MethodName: SetPlayerChicken
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3357968405930917891}
         m_TargetAssemblyTypeName: MenuFunctions, Assembly-CSharp
         m_MethodName: ToggleMenu
@@ -871,6 +883,7 @@ MonoBehaviour:
   previewCost: {fileID: 1998623363577033600}
   coucheIcon: {fileID: 4955534896763338201}
   chickenToPreview: {fileID: 0}
+  animatorController: {fileID: 9100000, guid: 138c1f991fc20ae4bb1b3f557a3fb006, type: 2}
 --- !u!222 &6242919017809681734
 CanvasRenderer:
   m_ObjectHideFlags: 0

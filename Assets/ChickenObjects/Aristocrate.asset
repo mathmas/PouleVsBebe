@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Une poule distinguee
   spritePreview: {fileID: 21300000, guid: 1608c79cdf4314e47a5b0b7737db7aa9, type: 3}
   cost: 10
+  chickenBody: {fileID: 6072785293759749244, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}

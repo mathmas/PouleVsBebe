@@ -16,3 +16,4 @@ MonoBehaviour:
   description: C'est une super Poule
   spritePreview: {fileID: 21300000, guid: 1211f8881dbfb5b4bbdcdf8cb6394519, type: 3}
   cost: 10
+  chickenBody: {fileID: 5441327363736178490, guid: 819e875d672f1d54c8693499e1b19d4e, type: 3}
