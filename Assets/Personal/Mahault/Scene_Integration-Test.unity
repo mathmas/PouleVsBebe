@@ -2173,6 +2173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ms_Etagere-Roulette
       objectReference: {fileID: 0}
+    - target: {fileID: 4867883045363342918, guid: ec0c0a453fb88624ab186d6786048c4a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1db356e5e2fea84b94f227a8b62c4d5, type: 2}
     - target: {fileID: 5350756137811356648, guid: ec0c0a453fb88624ab186d6786048c4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.752
@@ -2560,6 +2564,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49ad01e6f11bf36448e461551b8df14c, type: 3}
+--- !u!1001 &7688322467487778241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6072785293759749244, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_Name
+      value: Mesh_Poule_Aristocrate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0020000935
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.949
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849146689420543686, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e6a23f5726cac142b7e0b0bf2cdb1dc, type: 3}
 --- !u!1001 &8481302094663569308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,3 +2948,4 @@ SceneRoots:
   - {fileID: 6407821980741157706}
   - {fileID: 521117446480212869}
   - {fileID: 6529501704272275689}
+  - {fileID: 7688322467487778241}

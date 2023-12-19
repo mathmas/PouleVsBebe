@@ -12,10 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Range(1f, 8f)]
     [Tooltip("Chicken speed when not found")]
-    [SerializeField] private float walkSpeed;
+    [SerializeField] public float walkSpeed;
     [Range(3f, 10f)]
     [Tooltip("Chicken speed when found")]
-    [SerializeField] private float runSpeed;
+    [SerializeField] public float runSpeed;
 
     [SerializeField] public bool isDiscovered;
     [SerializeField] public bool isHoldingBaby;

@@ -544,6 +544,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4232040680088796104}
+        m_TargetAssemblyTypeName: ShopPreviewBehaviour, Assembly-CSharp
+        m_MethodName: SetPlayerChicken
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4232040680088796104}
+        m_TargetAssemblyTypeName: ShopPreviewBehaviour, Assembly-CSharp
+        m_MethodName: ChangePlayerAbilities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3357968405930917891}
         m_TargetAssemblyTypeName: MenuFunctions, Assembly-CSharp
         m_MethodName: ToggleMenu
@@ -568,7 +592,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3979749846805458327}
+      - m_Target: {fileID: 4727396926421016850}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: SaveToJson
         m_Mode: 1
@@ -818,6 +842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4588402517314458373}
+  - component: {fileID: 4232040680088796104}
   - component: {fileID: 6242919017809681734}
   - component: {fileID: 7482018006868791608}
   m_Layer: 5
@@ -851,6 +876,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 400}
   m_SizeDelta: {x: 655, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4232040680088796104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654632226574747225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765fd18e32868b84db928dde4e9e3aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopManager: {fileID: 4727396926421016850}
+  previewName: {fileID: 4465814585147292140}
+  previewDescription: {fileID: 5719041622393805484}
+  previewSprite: {fileID: 7730393463326926575}
+  previewCost: {fileID: 1998623363577033600}
+  coucheIcon: {fileID: 4955534896763338201}
+  chickenToPreview: {fileID: 0}
+  animatorController: {fileID: 9100000, guid: 138c1f991fc20ae4bb1b3f557a3fb006, type: 2}
 --- !u!222 &6242919017809681734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1086,7 +1131,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6430096021394703909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4232040680088796104}
+        m_TargetAssemblyTypeName: ShopPreviewBehaviour, Assembly-CSharp
+        m_MethodName: TryToBuy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2864436383962081127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313982430883937025}
+  - component: {fileID: 4727396926421016850}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1581,7 +1639,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5582894504445525669}
-  - {fileID: 4805342250245224017}
   - {fileID: 6808409729359421289}
   - {fileID: 4588402517314458373}
   - {fileID: 2139321731330846418}
@@ -1593,6 +1650,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4727396926421016850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3721594034692611050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201509825a0991444b3bcda6e261e050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop:
+    activeChicken: {fileID: 0}
+    chickensAlreadyBuy: 
+  chickenScriptableObjects:
+  - {fileID: 11400000, guid: 0b22c2f07ccd05141b588e5a9b7d11f0, type: 2}
+  - {fileID: 11400000, guid: 1e343bafd1f90ca46b78b8aecb2deb00, type: 2}
+  - {fileID: 11400000, guid: 165a784b616d3ee48a46a039ae001f92, type: 2}
+  - {fileID: 11400000, guid: f1b1ecaeffe28e949b61e36464c15e38, type: 2}
+  - {fileID: 11400000, guid: e16991905d533034188040cb211879a2, type: 2}
+  - {fileID: 11400000, guid: b308ca53605a56e4e931f2b2c9aeadaf, type: 2}
+  - {fileID: 11400000, guid: ee2615940c8dab84581f77a00291a37c, type: 2}
+  - {fileID: 11400000, guid: 7d5e190616792c048adcf2d345e890c3, type: 2}
+  - {fileID: 11400000, guid: 2160c80c9407e6d459faf3a111dce660, type: 2}
+  activePreview: 1
 --- !u!1 &3841546014078169984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,57 +2162,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Ronan Mercier
---- !u!1 &5079312256929950893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4805342250245224017}
-  - component: {fileID: 3979749846805458327}
-  m_Layer: 5
-  m_Name: ShopManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4805342250245224017
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079312256929950893}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1313982430883937025}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3979749846805458327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079312256929950893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201509825a0991444b3bcda6e261e050, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shop:
-    activeChicken: 
-    chickens: []
 --- !u!1 &5108752229040136064
 GameObject:
   m_ObjectHideFlags: 0
