@@ -41,16 +41,18 @@ public class ShopPreviewBehaviour : MonoBehaviour
 
     public void SetPlayerChicken()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        GameObject playerBody = Instantiate(shopManager.chickenScriptableObjects[shopManager.activePreview].chickenBody, player.transform.position, player.transform.rotation, player.transform.GetChild(0));
-        
-        Debug.Log(playerBody);
+        if (shopManager.shop.chickensAlreadyBuy[shopManager.activePreview])
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject playerBody = Instantiate(shopManager.chickenScriptableObjects[shopManager.activePreview].chickenBody, player.transform.position, player.transform.rotation, player.transform.GetChild(0));
 
-        Destroy(player.transform.GetChild(0).GetChild(0).gameObject);
+            Debug.Log(playerBody);
 
-        //Give this to the player
-        //shopManager.chickenScriptableObjects[shopManager.activePreview];
+            Destroy(player.transform.GetChild(0).GetChild(0).gameObject);
 
+            //Give this to the player
+            //shopManager.chickenScriptableObjects[shopManager.activePreview];
+        }
     }
 
     public void TryToBuy()
