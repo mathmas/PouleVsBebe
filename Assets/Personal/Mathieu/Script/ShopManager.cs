@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
@@ -12,7 +13,20 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        LoadFromJson();
+        if(File.Exists(Application.persistentDataPath + "/ShopData.json"))
+        {
+            LoadFromJson();
+        }
+        else
+        {
+            shop.chickensAlreadyBuy.Add(true);
+
+            for (int i = 0; i < 8; i++)
+            {
+                shop.chickensAlreadyBuy.Add(false);
+            }
+
+        }
     }
 
     public void SaveToJson()

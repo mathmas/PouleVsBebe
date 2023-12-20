@@ -71,12 +71,11 @@ public class IncubatorManager : MonoBehaviour
         Debug.Log("Load done!");
     }
 
-    public void AddIncubatorBaby(Sprite sprite)
+    public void AddIncubatorBaby()
     {
         BabyIncubator newBaby = new BabyIncubator();
 
         newBaby.babyEndTimer = ((DateTime.Now.Ticks / 10000000) + time).ToString();
-        newBaby.babySprite = sprite;
 
         incubator.babyIncubators.Add(newBaby);
     }
