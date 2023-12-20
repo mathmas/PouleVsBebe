@@ -23,6 +23,7 @@ public class BabyBehaviour : MonoBehaviour
                 {
                     Debug.Log(parent.transform.GetChild(i).name);
                     parent.transform.GetChild(i).GetComponent<MercyBehaviour>().isAngry = true;
+                    GetComponent<AudioSource>().Play();
                 }
             }
 

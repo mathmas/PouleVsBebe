@@ -22,11 +22,11 @@ public class MercyBehaviour : MonoBehaviour
 
     [Range(0.5f, 5f)]
     [Tooltip("Mercy speed when she is calm (not angry)")]
-    [SerializeField] private float walkSpeed;
+    [SerializeField] public float walkSpeed;
 
     [Range(1f, 8f)]
     [Tooltip("Mercy speed when she is angry")]
-    [SerializeField] private float runSpeed;
+    [SerializeField] public float runSpeed;
 
     [Space(5f)]
 
@@ -86,6 +86,7 @@ public class MercyBehaviour : MonoBehaviour
             }
             agent.speed = runSpeed;
             GetComponentInChildren<Animator>().SetBool("isAngry", true);
+            GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(agent.velocity, Vector3.zero));
         }
         else
         {
@@ -132,6 +133,12 @@ public class MercyBehaviour : MonoBehaviour
             if (angryWithoutBaby)
             {
                 Debug.Log("Game Over" + gameObject.name + " touched you");
+                if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                {
+                    col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                    col.gameObject.GetComponent<AudioSource>().Play();
+                }
+
             }
             else
             {
@@ -140,6 +147,11 @@ public class MercyBehaviour : MonoBehaviour
                     if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
                         Debug.Log("Game Over" + gameObject.name + " touched you");
+                        if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                        {
+                            col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                            col.gameObject.GetComponent<AudioSource>().Play();
+                        }
                     }
                 }
             }

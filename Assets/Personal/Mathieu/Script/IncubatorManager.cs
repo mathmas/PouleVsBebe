@@ -71,12 +71,11 @@ public class IncubatorManager : MonoBehaviour
         Debug.Log("Load done!");
     }
 
-    public void AddIncubatorBaby(Sprite sprite)
+    public void AddIncubatorBaby()
     {
         BabyIncubator newBaby = new BabyIncubator();
 
         newBaby.babyEndTimer = ((DateTime.Now.Ticks / 10000000) + time).ToString();
-        newBaby.babySprite = sprite;
 
         incubator.babyIncubators.Add(newBaby);
     }
@@ -93,7 +92,9 @@ public class IncubatorManager : MonoBehaviour
             if ((long.Parse(timeBaby) - (DateTime.Now.Ticks / 10000000)) < 1)
             {
                 //Add couche
+                int couchesCount = PlayerPrefs.GetInt("couches");
 
+                PlayerPrefs.SetInt("couches", couchesCount + 1);
                 incubator.babyIncubators.Remove(baby);
             }
         }

@@ -18,6 +18,7 @@ public class MercyVision : MonoBehaviour
             if(mercyBehaviour.angryWithoutBaby)
             {
                 BecomeAngry(col.transform);
+                GetComponent<AudioSource>().Play();
             }
             else
             {
@@ -26,6 +27,7 @@ public class MercyVision : MonoBehaviour
                     if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
                         BecomeAngry(col.transform);
+                        GetComponent<AudioSource>().Play();
                     }
                 }
             }
