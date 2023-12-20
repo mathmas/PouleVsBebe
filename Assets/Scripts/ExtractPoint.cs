@@ -69,12 +69,13 @@ public class ExtractPoint : MonoBehaviour
     {
         if(timerStarted && GetComponent<AudioSource>().isPlaying == false)
         {
-            if(SceneManager.sceneCountInBuildSettings <= SceneManager.sceneCount)
+            if(SceneManager.sceneCountInBuildSettings <= SceneManager.GetActiveScene().buildIndex+1)
             {
                 SceneManager.LoadScene(0);
             }
             else
             {
+                Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
