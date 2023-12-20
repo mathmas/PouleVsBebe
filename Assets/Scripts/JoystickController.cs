@@ -33,6 +33,8 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     [HideInInspector] public Vector3 vecJoystick;
 
+    [SerializeField] AudioClip mainClip;
+
     #endregion
 
     void Start()
@@ -54,6 +56,16 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
         vecJoystick = new Vector3(vec.x,0f, vec.y);
 
         transform.GetComponentInParent<MenuFunctions>().menuButton.SetActive(false);
+
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = mainClip;
+
+        if(!audio.isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+            audio.volume += 0.2f;
+        }
+
         Camera.main.GetComponent<CamBehaviour>().isGameStarted = true;
 
         //Set Player animator

@@ -92,7 +92,9 @@ public class IncubatorManager : MonoBehaviour
             if ((long.Parse(timeBaby) - (DateTime.Now.Ticks / 10000000)) < 1)
             {
                 //Add couche
+                int couchesCount = PlayerPrefs.GetInt("couches");
 
+                PlayerPrefs.SetInt("couches", couchesCount + 1);
                 incubator.babyIncubators.Remove(baby);
             }
         }

@@ -56,27 +56,26 @@ public class ExtractPoint : MonoBehaviour
                     col.gameObject.GetComponent<PlayerMovement>().walkSpeed = 0f;
 
                     col.transform.position = transform.position;
+
+                    GetComponent<AudioSource>().Play();
+
                     timerStarted  = true;
-                    currentTime = timeWait;
+                    //currentTime = timeWait;
                 }
             }
         }
     }
     private void Update()
     {
-        if (timerStarted)
+        if(timerStarted && GetComponent<AudioSource>().isPlaying == false)
         {
-            currentTime -= Time.deltaTime;
-            if(currentTime < 0)
+            if(SceneManager.sceneCountInBuildSettings <= SceneManager.sceneCount)
             {
-                if(SceneManager.sceneCountInBuildSettings <= SceneManager.sceneCount)
-                {
-                    SceneManager.LoadScene(0);
-                }
-                else
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                }
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }

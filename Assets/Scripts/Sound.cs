@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public void PlayAudioSourceSound()
+    [SerializeField] private AudioClip sound;
+
+    private void Start()
     {
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().clip = sound;
     }
 }

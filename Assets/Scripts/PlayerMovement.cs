@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,9 +32,23 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     #endregion
 
+    public bool gameOver;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        if(gameOver)
+        {
+            Debug.Log("player: the game is over");
+            if(GetComponent<AudioSource>().isPlaying == false)
+            {
+                Debug.Log("player: not playing sound");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 
     private void FixedUpdate()

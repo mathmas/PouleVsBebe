@@ -133,6 +133,12 @@ public class MercyBehaviour : MonoBehaviour
             if (angryWithoutBaby)
             {
                 Debug.Log("Game Over" + gameObject.name + " touched you");
+                if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                {
+                    col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                    col.gameObject.GetComponent<AudioSource>().Play();
+                }
+
             }
             else
             {
@@ -141,6 +147,11 @@ public class MercyBehaviour : MonoBehaviour
                     if (col.transform.GetChild(i).CompareTag("Baby"))
                     {
                         Debug.Log("Game Over" + gameObject.name + " touched you");
+                        if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                        {
+                            col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                            col.gameObject.GetComponent<AudioSource>().Play();
+                        }
                     }
                 }
             }
