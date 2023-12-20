@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incubator:
     babyIncubators: []
-  time: 600
+  time: 300
   timerStarted: 0
   timeWait: 3
   currentTime: 0

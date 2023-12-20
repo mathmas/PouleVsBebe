@@ -15,19 +15,22 @@ public class MercyVision : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if(mercyBehaviour.angryWithoutBaby)
+            if(!mercyBehaviour.isAngry)
             {
-                BecomeAngry(col.transform);
-                GetComponent<AudioSource>().Play();
-            }
-            else
-            {
-                for (int i = 0; i < col.transform.childCount; i++)
+                if (mercyBehaviour.angryWithoutBaby)
                 {
-                    if (col.transform.GetChild(i).CompareTag("Baby"))
+                    BecomeAngry(col.transform);
+                    GetComponent<AudioSource>().Play();
+                }
+                else
+                {
+                    for (int i = 0; i < col.transform.childCount; i++)
                     {
-                        BecomeAngry(col.transform);
-                        GetComponent<AudioSource>().Play();
+                        if (col.transform.GetChild(i).CompareTag("Baby"))
+                        {
+                            BecomeAngry(col.transform);
+                            GetComponent<AudioSource>().Play();
+                        }
                     }
                 }
             }

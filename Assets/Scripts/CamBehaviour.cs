@@ -24,13 +24,18 @@ public class CamBehaviour : MonoBehaviour
 
     #endregion
 
+    private bool trigger;
+
+    private Vector3 offSet;
+
+
+    [SerializeField] private GameObject backgroundBlack;
     private void Start()
     {
         isGameStarted = false;
     }
     private void FixedUpdate()
     {
-        Vector3 offSet;
         if(!isGameStarted)
         {
             offSet = startOffSet;
@@ -44,5 +49,22 @@ public class CamBehaviour : MonoBehaviour
         transform.position = smoothedPosition;
     }
 
+    private void Update()
+    {
+        if(target.GetComponent<PlayerMovement>().gameOver && !trigger) 
+        {
+            GetComponent<Camera>().cullingMask &= ~(1 << LayerMask.NameToLayer("Default"));
+            trigger = true;
+
+            target.transform.rotation = new Quaternion(0,0,0,0);
+            target.transform.Rotate(Vector3.up * 140);
+            smoothSpeed = 1;
+            backgroundBlack.SetActive(true);
+
+            playingOffSet = startOffSet ;
+            transform.LookAt(target.position);
+            target.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
 
 }

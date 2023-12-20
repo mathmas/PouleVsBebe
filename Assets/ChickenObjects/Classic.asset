@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd237065a6b73647809c159a2df3e88, type: 3}
   m_Name: Classic
   m_EditorClassIdentifier: 
-  name: Classic
+  name: Classique
   description: Juste une poule
   spritePreview: {fileID: 21300000, guid: c16085e5da069404cbb689ea8007970f, type: 3}
   cost: 0

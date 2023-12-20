@@ -29,10 +29,10 @@ public class ExtractPoint : MonoBehaviour
                         LoadFromJson();
                         if(incubator.babyIncubators.Count > 0)
                         {
-                            time = 3600;
+                            time = 300;
                         }else
                         {
-                            time = 300;
+                            time = 150;
                         }
                     }
                     AddIncubatorBaby();
@@ -61,6 +61,9 @@ public class ExtractPoint : MonoBehaviour
 
                     timerStarted  = true;
                     //currentTime = timeWait;
+
+                    int couches = PlayerPrefs.GetInt("couches");
+                    PlayerPrefs.SetInt("couches", couches+1);
                 }
             }
         }

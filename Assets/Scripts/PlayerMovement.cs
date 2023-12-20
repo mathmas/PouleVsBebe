@@ -34,16 +34,24 @@ public class PlayerMovement : MonoBehaviour
 
     public bool gameOver;
 
+    [SerializeField] private float timerDeath;
+    private float currentTimer;
+
+    private bool triggerDeathAnim = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        currentTimer = timerDeath;
     }
     private void Update()
     {
-        if(gameOver)
+        if (gameOver)
         {
             Debug.Log("player: the game is over");
-            if(GetComponent<AudioSource>().isPlaying == false)
+            currentTimer -= Time.deltaTime;
+
+            if (currentTimer < 0 || Input.GetMouseButtonDown(0))
             {
                 Debug.Log("player: not playing sound");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -55,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float movespeed;
 
-        if(!isDiscovered)
+        if (!isDiscovered)
         {
             movespeed = walkSpeed;
         }
@@ -67,5 +75,18 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = (movespeed * joystickController.vecJoystick);
         transform.GetComponentInChildren<Animator>().SetFloat("moveSpeed", Vector3.Distance(rb.velocity, Vector3.zero));
         transform.LookAt(rb.velocity + transform.position);
+    }
+
+    public void TriggerDeathAnim()
+    {
+        if(!triggerDeathAnim)
+        {
+            triggerDeathAnim = true;
+            transform.GetComponentInChildren<Animator>().SetTrigger("gameOver");
+
+            Debug.Log("triggerDeathAnim");
+            runSpeed = 0f;
+            walkSpeed = 0f;
+        }
     }
 }

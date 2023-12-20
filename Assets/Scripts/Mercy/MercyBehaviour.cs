@@ -136,6 +136,7 @@ public class MercyBehaviour : MonoBehaviour
                 if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
                 {
                     col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                    col.gameObject.GetComponent<PlayerMovement>().TriggerDeathAnim();
                     col.gameObject.GetComponent<AudioSource>().Play();
                 }
 
@@ -150,6 +151,7 @@ public class MercyBehaviour : MonoBehaviour
                         if (col.gameObject.GetComponent<AudioSource>().isPlaying == false)
                         {
                             col.gameObject.GetComponent<PlayerMovement>().gameOver = true;
+                            col.gameObject.GetComponent<PlayerMovement>().TriggerDeathAnim();
                             col.gameObject.GetComponent<AudioSource>().Play();
                         }
                     }

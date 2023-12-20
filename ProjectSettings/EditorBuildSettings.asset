@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Personal/Paul/level 2.unity
     guid: 7803bf4433f61d94fb06d56a25412ea3
+  - enabled: 1
+    path: Assets/Personal/Alban/LDLevel5.unity
+    guid: 12d8a6439d47e034f96e1622cbc667a6
+  - enabled: 1
+    path: Assets/Personal/Alban/LDLevel3.unity
+    guid: 7191c907f65ae3a43a12522e79875248
+  - enabled: 1
+    path: Assets/Personal/Alban/LDLevel2.unity
+    guid: 9b1febe4c17f2494d843c5bd4621fff8
   m_configObjects: {}

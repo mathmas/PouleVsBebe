@@ -38,7 +38,7 @@ public class IncubatorManager : MonoBehaviour
             }
             else
             {
-                childText.text = "Ready to collect";
+                childText.text = "Collecter";
                 SetSprite(collect, i);
             }
         }
