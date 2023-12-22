@@ -1046,14 +1046,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 506376553}
-    - target: {fileID: 5883046366934103165, guid: 9e994fdb42ea005449710bee3acf6de7, type: 3}
-      propertyPath: priority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431038444781847440, guid: 9e994fdb42ea005449710bee3acf6de7, type: 3}
-      propertyPath: m_ShowToolkit
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6628424034102322937, guid: 9e994fdb42ea005449710bee3acf6de7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
