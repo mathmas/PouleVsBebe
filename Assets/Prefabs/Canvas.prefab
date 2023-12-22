@@ -1747,7 +1747,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Magasin
+  m_Text: Shop
 --- !u!1 &3542592230452006367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,7 +1844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1313982430883937025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2173,6 +2173,7 @@ MonoBehaviour:
   collect: {fileID: 21300000, guid: a870edee4fc48d344b71a5340c3b1dab, type: 3}
   incubator:
     babyIncubators: []
+  readyText: Ready
 --- !u!1 &4293806921193050234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,7 +3129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retour
+  m_Text: Back
 --- !u!1 &5547313958612485099
 GameObject:
   m_ObjectHideFlags: 0
@@ -4115,7 +4116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Couveuse
+  m_Text: Incubator
 --- !u!1 &7355634967311408129
 GameObject:
   m_ObjectHideFlags: 0

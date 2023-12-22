@@ -15,6 +15,8 @@ public class IncubatorManager : MonoBehaviour
 
     public Incubator incubator = new Incubator();
 
+    [SerializeField] private string readyText;
+
 
     private void Start()
     {
@@ -38,7 +40,7 @@ public class IncubatorManager : MonoBehaviour
             }
             else
             {
-                childText.text = "Collecter";
+                childText.text = readyText;
                 SetSprite(collect, i);
             }
         }

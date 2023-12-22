@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd237065a6b73647809c159a2df3e88, type: 3}
   m_Name: DocteurPoule
   m_EditorClassIdentifier: 
-  name: Docteur Poule
+  name: Med Chicken
   description: Un camouflage parfait
   spritePreview: {fileID: 21300000, guid: a490b2fd3c9a84c46872863e77dc6bd7, type: 3}
   cost: 7
