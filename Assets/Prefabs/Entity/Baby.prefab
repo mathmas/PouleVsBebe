@@ -41,9 +41,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2393219401855884994}
-  - component: {fileID: 2202566157760093776}
   - component: {fileID: 2400569215533716829}
   - component: {fileID: 1735367089876480930}
+  - component: {fileID: 284054611290159684}
   m_Layer: 0
   m_Name: Baby
   m_TagString: Baby
@@ -67,29 +67,6 @@ Transform:
   - {fileID: 2612896778325732590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2202566157760093776
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244352134330673459}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1.2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2400569215533716829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +176,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &284054611290159684
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244352134330673459}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1484173977748643321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,10 +205,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2612896778325732590}
     m_Modifications:
-    - target: {fileID: 2868617351339847360, guid: e4a503c9e2d26544ebc8356bdd85bf00, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2868617351339847360, guid: e4a503c9e2d26544ebc8356bdd85bf00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
