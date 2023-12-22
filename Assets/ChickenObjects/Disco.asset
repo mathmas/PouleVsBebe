@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Disco
   m_EditorClassIdentifier: 
   name: Disco
-  description: C'est l'heure de danser !
+  description: It's time to dance!
   spritePreview: {fileID: 21300000, guid: f0a6fedc3c993dd4d89df203305a1fc5, type: 3}
   cost: 7
   chickenBody: {fileID: 3491869083405232806, guid: 7ea6e2f77e71df84d9d949f595376d97, type: 3}

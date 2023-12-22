@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MortVivant
   m_EditorClassIdentifier: 
   name: Zombie
-  description: Effrayante mais pas pour les enfants
+  description: Spooky, but not for kids
   spritePreview: {fileID: 21300000, guid: 849bb51cee4c7b049ada1fab68c9deb8, type: 3}
   cost: 7
   chickenBody: {fileID: 8486521050580876714, guid: ddb3da2d95e776f4aac4f1dd29d85dc6, type: 3}
